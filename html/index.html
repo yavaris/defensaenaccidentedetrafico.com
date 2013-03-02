@@ -4,8 +4,7 @@
 <head>
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="author" content="SemiColonWeb" />
-
+	<meta name="author" content="Yavaris D&D" />
 
     <!-- ============================================
         Stylesheets
@@ -38,36 +37,32 @@
     <!-- ============================================
         Document Title
     ============================================= -->
-	<title>CoWorker - Responsive Business Theme</title>
+	<title>DAT - Defensa en accidentes de tráfico</title>
 
 </head>
 
+<?php require_once("code/config/config.php"); // Configuration File ?>
 <body>
 
     <div id="wrapper" class="clearfix">
-
         <div id="top-bar">
-
             <div class="container clearfix">
-
-                <div id="top-menu"></div>
-
-                <div id="top-social">
-
-                    <ul>
-
-                        <li class="ts-facebook"><a href="#"><div class="ts-icon"></div><div class="ts-text">Facebook</div></a></li>
-                        <li class="ts-twitter"><a href="#"><div class="ts-icon"></div><div class="ts-text">Twitter</div></a></li>
-                        <li class="ts-gplus"><a href="#"><div class="ts-icon"></div><div class="ts-text">Google+</div></a></li>
-                        <li class="ts-phone"><a href="tel:+913326789234"><div class="ts-icon"></div><div class="ts-text">+91.33.26789234</div></a></li>
-                        <li class="ts-mail"><a href="mailto:coworker@abc.com"><div class="ts-icon"></div><div class="ts-text">coworker@abc.com</div></a></li>
-
-                    </ul>
-
+                <div id="top-menu">
+                    <ul><li><span>/</span><strong><a href="">Defensa en Accidentes de tráfico</a></strong></li></ul>
                 </div>
-
+                <div id="top-social">
+                    <ul>
+<?php
+                        // Main Header Social Links
+                        if(!empty($arraySocialLinks)){
+                            foreach ($arraySocialLinks as $keySocial => $valueSocial) {
+                                ?><li class="ts-<?=$keySocial;?>"><a target="<?=$valueSocial['target']?$keySocial:"";?>" href="<?=$valueSocial['link'];?>"><div class="ts-icon"></div><div class="ts-text"><?=$valueSocial['name'];?></div></a></li><?php
+                            }
+                        }
+?>
+                    </ul>
+                </div>
             </div>
-
         </div>
 
 
@@ -295,11 +290,8 @@
         </div>
         <div id="copyrights" class="copyrights-dark">
             <div class="container clearfix">
-                <div class="col_half">
-                    Copyrights &copy; 2012 &amp; All Rights Reserved by CoWorker Inc.
-                </div>
-                <div class="col_half col_last tright">
-                    <a href="#">Privacy Policy</a><span class="link-divider">/</span><a href="#">Terms of Service</a><span class="link-divider">/</span><a href="#">FAQs</a>
+                <div class="tright" style="width:100%">
+                    Yavaris D & D - Copyright &copy; 2013
                 </div>
             </div>
         </div>
