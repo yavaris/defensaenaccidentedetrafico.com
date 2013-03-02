@@ -1,0 +1,65 @@
+.stretched #wrapper{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.stretched #top-social { margin-right: 0; }
+
+.stretched #header,
+.stretched .content-wrap {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.stretched #slider { padding: 40px 0; }
+
+.stretched #portfolio-single-wrap #slider {
+    padding: 0;
+    background: none;
+}
+
+.stretched #slider .container { width: 960px; }
+
+.stretched #slider.elastic-slideshow { padding: 0; }
+
+.stretched #slider.camera-slideshow,
+.stretched #slider.revolution-slider {
+    padding: 0;
+    height: auto;
+}
+
+.stretched #slider.elastic-slideshow .container,
+.stretched #slider.camera-slideshow .container,
+.stretched #slider.revolution-slider .container { width: 100%; }
+
+.stretched #piecemaker { margin-bottom: -35px; }
+
+.stretched .slider-3d { margin-left: -30px; }
+
+.stretched #slider .kwicks .kwick-panel { width: 192px; }
+
+.stretched .slider-line { display: none; }
+
+.stretched .slider-shadow { display: block; }
+
+.stretched #page-title { padding: 30px 0; }
+
+.stretched #copyrights { margin-bottom: -20px; }
+
+
+@media only screen and (max-width: 979px) {
+
+
+.stretched #slider { padding: 0; }
+
+.stretched #slider .container { width: 100%; }
+
+.stretched .slider-line { display: block; }
+
+.stretched #page-title { padding: 25px 0; }
+
+.stretched #copyrights { margin-bottom: 0; }
+
+
+}
