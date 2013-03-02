@@ -1,32 +1,10 @@
-# -- Costasur -----------------------------------------
+# -- Dat -----------------------------------------
 
-# En el bundle Costasur\HTML5Bundle se usa esta ruta
-# para los javascripts de terceros, hay que forzar que
-# se incluyan
-
-!*/js/vendor/*
-
-
-
-# -- Symfony2 -----------------------------------------
-app/bootstrap.php.cache
-app/bootstrap_cache.php.cache
-app/config/parameters.ini
-app/config/parameters.yml
-app/cache/*
-app/logs/*
-app/build/*
-vendor/*
-web/bundles/*
-web/css/*
-web/js/*
-web/uploads/*
+images/*
+demo/*
 
 # -- Composer -----------------------------------------
 composer.phar
-
-# -- PHPUnit ------------------------------------------
-app/phpunit.xml
 
 # -- Editores -----------------------------------------
 # vim
@@ -68,17 +46,6 @@ tmtags
 .ctags
 *.TODO
 
-# netbeans
-nbproject/private/
-build/
-build.xml
-cache.properties
-nbbuild/
-dist/
-nbdist/
-nbactions.xml
-nb-configuration.xml
-
 # -- Sistemas Operativos ------------------------------
 # Windows
 Thumbs.db
@@ -91,15 +58,3 @@ $RECYCLE.BIN/
 !.gitignore
 !.htaccess
 *~
-
-# Mac OS X
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
-._*
-.Spotlight-V100
-.Trashes
-
-# -- BDD Behat ------------------------------
-behat.yml
