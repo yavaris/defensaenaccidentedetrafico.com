@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es-ES">
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="Yavaris D&D" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<?php
+        // Stylesheets
+        if(!empty($arrayStyleSheets)){
+            foreach ($arrayStyleSheets as $valueStyleSheet) {
+                ?><link rel="stylesheet" href="<?=$valueStyleSheet;?>" type="text/css" /><?
+            }
+        }
+
+        // External Javascripts
+        if(!empty($arrayExternalJavascripts)){
+            foreach ($arrayExternalJavascripts as $valueExternalJavascript) {
+                ?><script type="text/javascript" src="js/<?=$valueExternalJavascript;?>"></script><?
+            }
+        }
+?>
+        <!--[if lt IE 9]>
+            <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+
+        <!-- Document Title -->
+        <title>DAT - Defensa en accidentes de tráfico</title>
+    </head>
+
+    <body>
+        <div id="wrapper" class="clearfix">
+            <div id="top-bar">
+                <div class="container clearfix">
+                    <div id="top-menu">
+                        <ul><li><span>/</span><strong><a href="index.html">Defensa en Accidentes de tráfico</a></strong></li></ul>
+                    </div>
+                    <div id="top-social">
+                        <ul>
+<?php
+                        // Main Header Social Links
+                        if(!empty($arraySocialLinks)){
+                            foreach ($arraySocialLinks as $keySocial => $valueSocial) {
+                                ?><li class="ts-<?=$keySocial;?>"><a target="<?=$valueSocial['target']?$keySocial:"";?>" href="<?=$valueSocial['link'];?>"><div class="ts-icon"></div><div class="ts-text"><?=$valueSocial['name'];?></div></a></li><?php
+                            }
+                        }
+?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="header">
+                <div class="container clearfix">
+                    <div id="logo"><a href="index.html"><img src="images/logo.png" alt="CoWorker" title="CoWorker" /></a></div>
+                    <div id="primary-menu">
+                        <ul>
+<?php
+                        // Main Header Page Links
+                        if(!empty($arrayPageLinks)){
+                            foreach ($arrayPageLinks as $keyPage => $valuePage) {
+                                ?><li <?=("/" . $valuePage['link'] == $_SERVER['SCRIPT_NAME'])?'class="current"':'';?>><a href="<?=$valuePage['link'];?>"><div><?=$valuePage['name'];?></div><span><?=$valuePage['info'];?></span></a></li><?php
+                            }
+                        }
+?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+<?php
+            // Including Template
+            include_once("code/config/includeTemplate.php");
+?>
+            <div id="copyrights" class="copyrights-dark">
+                <div class="container clearfix">
+                    <div class="tright" style="width:100%">Yavaris D & D - Copyright &copy; 2013</div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/custom.js"></script>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-23255544-4']);
+            _gaq.push(['_trackPageview']);
+
+              (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+              })();
+        </script>
+    </body>
+</html>
