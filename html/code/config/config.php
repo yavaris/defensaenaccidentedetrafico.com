@@ -70,7 +70,7 @@
                                                     "blog"     => array
                                                                         (
                                                                             "name"      => "Sobre nosotros",
-                                                                            "link"      => "blog.html",
+                                                                            "link"      => "sobre-nosotros.html",
                                                                             "info"      => "¡Conócenos!"
                                                                         ),
                                                     "contact"  => array

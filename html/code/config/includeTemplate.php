@@ -8,6 +8,10 @@
             include_once("code/templates/contact.html");
             break;
 
+        case '/sobre-nosotros.html':
+            include_once("code/templates/about-us.html");
+            break;
+
         default:
             include_once("code/templates/home.html");
             break;
