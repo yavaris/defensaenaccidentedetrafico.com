@@ -87,21 +87,21 @@
                                                     "0"    => array
                                                                         (
                                                                             "class"     => "col_one_third",
-                                                                            "icon"      => "icon-copy",
+                                                                            "icon"      => "icon-thumbs-up",
                                                                             "title"     => "85+ HTML Pages",
                                                                             "text"      => "Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit."
                                                                         ),
                                                     "1"     => array
                                                                         (
                                                                             "class"     => "col_one_third",
-                                                                            "icon"      => "icon-fullscreen",
+                                                                            "icon"      => "icon-user",
                                                                             "title"     => "Fully Responsive",
                                                                             "text"      => "Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit."
                                                                         ),
                                                     "2"  => array
                                                                         (
                                                                             "class"     => "col_one_third col_last",
-                                                                            "icon"      => "icon-picture",
+                                                                            "icon"      => "icon-envelope",
                                                                             "title"     => "12 Slider Plugins",
                                                                             "text"      => "Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit."
                                                                         )
