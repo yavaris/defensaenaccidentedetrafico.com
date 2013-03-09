@@ -76,7 +76,7 @@
                                                     "contact"  => array
                                                                         (
                                                                             "name"      => "Contactar",
-                                                                            "link"      => "contact.html",
+                                                                            "link"      => "contactar.html",
                                                                             "info"      => "¡Infórmate!"
                                                                         )
                                                 );

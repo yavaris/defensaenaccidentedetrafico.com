@@ -5,7 +5,7 @@
     // Includind template based in Page URL
     switch ($_SERVER['SCRIPT_NAME']) {
         case '/contactar.html':
-            # code...
+            include_once("code/templates/contact.html");
             break;
 
         default:
