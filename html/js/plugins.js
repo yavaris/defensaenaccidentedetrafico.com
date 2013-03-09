@@ -5,33 +5,33 @@
  * to offer multiple easing options
  *
  * TERMS OF USE - jQuery Easing
- * 
- * Open source under the BSD License. 
- * 
+ *
+ * Open source under the BSD License.
+ *
  * Copyright © 2008 George McGinley Smith
  * All rights reserved.
- * 
- * Redistribution and use in source and binary forms, with or without modification, 
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
- * 
- * Redistributions of source code must retain the above copyright notice, this list of 
+ *
+ * Redistributions of source code must retain the above copyright notice, this list of
  * conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, this list 
- * of conditions and the following disclaimer in the documentation and/or other materials 
+ * Redistributions in binary form must reproduce the above copyright notice, this list
+ * of conditions and the following disclaimer in the documentation and/or other materials
  * provided with the distribution.
- * 
- * Neither the name of the author nor the names of contributors may be used to endorse 
+ *
+ * Neither the name of the author nor the names of contributors may be used to endorse
  * or promote products derived from this software without specific prior written permission.
- * 
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
  * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
  *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
  *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+ *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
  * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
- * OF THE POSSIBILITY OF SUCH DAMAGE. 
+ *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ * OF THE POSSIBILITY OF SUCH DAMAGE.
  *
 */
 
@@ -147,7 +147,7 @@ jQuery.extend( jQuery.easing,
 		return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
 	},
 	easeInOutBack: function (x, t, b, c, d, s) {
-		if (s == undefined) s = 1.70158; 
+		if (s == undefined) s = 1.70158;
 		if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
 		return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
 	},
@@ -174,33 +174,33 @@ jQuery.extend( jQuery.easing,
 /*
  *
  * TERMS OF USE - EASING EQUATIONS
- * 
- * Open source under the BSD License. 
- * 
+ *
+ * Open source under the BSD License.
+ *
  * Copyright © 2001 Robert Penner
  * All rights reserved.
- * 
- * Redistribution and use in source and binary forms, with or without modification, 
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
- * 
- * Redistributions of source code must retain the above copyright notice, this list of 
+ *
+ * Redistributions of source code must retain the above copyright notice, this list of
  * conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, this list 
- * of conditions and the following disclaimer in the documentation and/or other materials 
+ * Redistributions in binary form must reproduce the above copyright notice, this list
+ * of conditions and the following disclaimer in the documentation and/or other materials
  * provided with the distribution.
- * 
- * Neither the name of the author nor the names of contributors may be used to endorse 
+ *
+ * Neither the name of the author nor the names of contributors may be used to endorse
  * or promote products derived from this software without specific prior written permission.
- * 
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
  * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
  *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
  *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+ *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
  * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
- * OF THE POSSIBILITY OF SUCH DAMAGE. 
+ *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ * OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
 
@@ -607,7 +607,7 @@ function getParam(name,url){name=name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\
 					o.retainPath=($.inArray($$[0],o.$path)>-1);
 					$$.hideSuperfishUl();
 					if (o.$path.length && $$.parents(['li.',o.hoverClass].join('')).length<1){over.call(o.$path);}
-				},o.delay);	
+				},o.delay);
 			},
 			getMenu = function($menu){
 				var menu = $menu.parents(['ul.',c.menuClass,':first'].join(''))[0];
@@ -615,7 +615,7 @@ function getParam(name,url){name=name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\
 				return menu;
 			},
 			addArrow = function($a){ $a.addClass(c.anchorClass).append($arrow.clone()); };
-			
+
 		return this.each(function() {
 			var s = this.serial = sf.o.length;
 			var o = $.extend({},sf.defaults,op);
@@ -624,20 +624,20 @@ function getParam(name,url){name=name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\
 					.filter('li:has(ul)').removeClass(o.pathClass);
 			});
 			sf.o[s] = sf.op = o;
-			
+
 			$('li:has(ul)',this)[($.fn.hoverIntent && !o.disableHI) ? 'hoverIntent' : 'hover'](over,out).each(function() {
 				if (o.autoArrows) addArrow( $('>a:first-child',this) );
 			})
 			.not('.'+c.bcClass)
 				.hideSuperfishUl();
-			
+
 			var $a = $('a',this);
 			$a.each(function(i){
 				var $li = $a.eq(i).parents('li');
 				$a.eq(i).focus(function(){over.call($li);}).blur(function(){out.call($li);});
 			});
 			o.onInit.call(this);
-			
+
 		}).each(function() {
 			var menuClasses = [c.menuClass];
 			if (sf.op.dropShadows  && !($.browser.msie && $.browser.version < 7)) menuClasses.push(c.shadowClass);
@@ -778,12 +778,12 @@ settings.itemCallback.call(container,item);}});if($.isFunction(callback)){callba
  * Dual licensed under the MIT or GPL Version 2 licenses.
  * You are free to use this plugin in commercial projects as long as the copyright header is left intact.
  *
- * This plugin uses the Instagram(tm) API and is not endorsed or certified by Instagram or Burbn, inc. 
+ * This plugin uses the Instagram(tm) API and is not endorsed or certified by Instagram or Burbn, inc.
  * All Instagram(tm) logos and trademarks displayed on this plugin are property of Burbn, Inc.
  *
  * Date: Thu Jul 15 14:05:02 2012 -0500
  */
- 
+
 if(typeof Object.create!=='function'){Object.create=function(obj){function F(){};F.prototype=obj;return new F()}}(function($,window,document,undefined){var Instagram={init:function(options,elem){var self=this;self.elem=elem;self.$elem=$(elem);self.api='https://api.instagram.com/v1',self.accessData=$.fn.spectragram.accessData,self.options=$.extend({},$.fn.spectragram.options,options)},getRecentMedia:function(userID){var self=this,getData='/users/'+userID+'/media/recent/?'+self.accessData.clientID+'&access_token='+self.accessData.accessToken+'';self.fetch(getData).done(function(results){self.display(results)})},getUserFeed:function(){var self=this,getData='/users/search?q='+self.options.query+'&count='+self.options.max+'&client_id='+self.accessData.clientID+'';self.fetch(getData).done(function(results){if(results.data.length){self.getRecentMedia(results.data[0].id)}else{$.error('Spectagram.js - Error: the username '+self.options.query+' does not exist.')}})},getPopular:function(){var self=this,getData='/media/popular?client_id='+self.accessData.clientID+'&access_token='+self.accessData.accessToken+'';self.fetch(getData).done(function(results){self.display(results)})},getRecentTagged:function(){var self=this,getData='/tags/'+self.options.query+'/media/recent?client_id='+self.accessData.clientID+'&access_token='+self.accessData.accessToken+'';self.fetch(getData).done(function(results){if(results.data.length){self.display(results)}else{$.error('Spectagram.js - Error: the tag '+self.options.query+' does not have results.')}})},fetch:function(getData){var self=this,getUrl=self.api+getData;return $.ajax({type:"GET",dataType:"jsonp",cache:false,url:getUrl})},display:function(results){var self=this,setSize=self.options.size,size,max=(self.options.max>=results.data.length)?results.data.length:self.options.max;if(results.data.length===0){self.$elem.append($(self.options.wrapEachWith).append(self.options.notFoundMsg))}else{for(var i=0;i<max;i++){if(setSize=="small"){size=results.data[i].images.thumbnail.url}else if(setSize=="medium"){size=results.data[i].images.low_resolution.url}else{size=results.data[i].images.standard_resolution.url}self.$elem.append($(self.options.wrapEachWith).append("<a target='_blank' href='"+results.data[i].link+"'><img src='"+size+"'></img></a>"))}}}};jQuery.fn.spectragram=function(method,options){if(jQuery.fn.spectragram.accessData.clientID){this.each(function(){var instagram=Object.create(Instagram);instagram.init(options,this);if(instagram[method]){return instagram[method](this)}else{$.error('Method '+method+' does not exist on jQuery.spectragram')}})}else{$.error('You must define an accessToken and a clientID on jQuery.spectragram')}};jQuery.fn.spectragram.options={max:10,query:'coffee',size:'medium',wrapEachWith:'<li></li>'};jQuery.fn.spectragram.accessData={accessToken:null,clientID:null}})(jQuery,window,document);
 
 
@@ -791,9 +791,9 @@ if(typeof Object.create!=='function'){Object.create=function(obj){function F(){}
 
 /**
  * jQuery Plugin - Jribbble v@VERSION
- * A jQuery plugin to fetch shot and player data from the Dribbble API, 
+ * A jQuery plugin to fetch shot and player data from the Dribbble API,
  * http://dribbble.com/api
- * 
+ *
  * Copyright (c) 2011 Tyler Gaw
  *
  * Permission is hereby granted, free of charge, to any person obtaining
@@ -814,7 +814,7 @@ if(typeof Object.create!=='function'){Object.create=function(obj){function F(){}
  * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+ *
  *
  * Date: @DATE
  *
@@ -893,7 +893,7 @@ if(typeof Object.create!=='function'){Object.create=function(obj){function F(){}
 	// @param FUNCTION callback - Function that will be called once the
 	//                            request has successfully completed. The data
 	//                            from the request will be passed to the callback
-	// @param OBJ OPTIONAL pagingOpts - { page: 1, per_page: 15 } 
+	// @param OBJ OPTIONAL pagingOpts - { page: 1, per_page: 15 }
 	//                                  @see http://dribbble.com/api#pagination
 	$.jribbble.getReboundsOfShot = function (shotId, callback, pagingOpts) {
 		var resource = $.jribbble.paths.shots + shotId + $.jribbble.paths.rebounds;
@@ -904,7 +904,7 @@ if(typeof Object.create!=='function'){Object.create=function(obj){function F(){}
 	// @param FUNCTION callback  - Function that will be called once the
 	//                             request has successfully completed. The data
 	//                             from the request will be passed to the callback
-	// @param OBJ OPTIONAL pagingOpts - { page: 1, per_page: 15 } 
+	// @param OBJ OPTIONAL pagingOpts - { page: 1, per_page: 15 }
 	//                                  @see http://dribbble.com/api#pagination
 	$.jribbble.getShotsByList = function (listName, callback, pagingOpts) {
 		var resource = $.jribbble.paths.shots + listName;
@@ -916,9 +916,9 @@ if(typeof Object.create!=='function'){Object.create=function(obj){function F(){}
 	// @param FUNCTION callback - Function that will be called once the
 	//                            request has successfully completed. The data
 	//                            from the request will be passed to the callback.
-	// @param OBJ OPTIONAL pagingOpts - { page: 1, per_page: 15 } 
+	// @param OBJ OPTIONAL pagingOpts - { page: 1, per_page: 15 }
 	//                                  @see http://dribbble.com/api#pagination
-	$.jribbble.getShotsByPlayerId = function (playerId, callback, pagingOpts) {	
+	$.jribbble.getShotsByPlayerId = function (playerId, callback, pagingOpts) {
 		var resource = $.jribbble.paths.players + playerId + $.jribbble.paths.shots;
 		$.fn.jribbble().makeRequest(resource, callback, pagingOpts);
 	};
@@ -928,9 +928,9 @@ if(typeof Object.create!=='function'){Object.create=function(obj){function F(){}
 	// @param FUNCTION callback - Function that will be called once the
 	//                            request has successfully completed. The data
 	//                            from the request will be passed to the callback.
-	// @param OBJ OPTIONAL pagingOpts - { page: 1, per_page: 15 } 
+	// @param OBJ OPTIONAL pagingOpts - { page: 1, per_page: 15 }
 	//                                  @see http://dribbble.com/api#pagination
-	$.jribbble.getShotsThatPlayerFollows = function (playerId, callback, pagingOpts) {		
+	$.jribbble.getShotsThatPlayerFollows = function (playerId, callback, pagingOpts) {
 		var resource = $.jribbble.paths.players + playerId + $.jribbble.paths.shots + $.jribbble.paths.following;
 		$.fn.jribbble().makeRequest(resource, callback, pagingOpts);
 	};
@@ -980,7 +980,7 @@ if(typeof Object.create!=='function'){Object.create=function(obj){function F(){}
 	// @param FUNCTION callback - Function that will be called once the
 	//                            request has successfully completed. The data
 	//                            from the request will be passed to the callback.
-	// @param OBJ OPTIONAL pagingOpts - { page: 1, per_page: 15 } 
+	// @param OBJ OPTIONAL pagingOpts - { page: 1, per_page: 15 }
 	//                                  @see http://dribbble.com/api#pagination
 	$.jribbble.getCommentsOfShot = function (shotId, callback, pagingOpts) {
 		var resource = $.jribbble.paths.shots + shotId + $.jribbble.paths.comments;
@@ -992,7 +992,7 @@ if(typeof Object.create!=='function'){Object.create=function(obj){function F(){}
 	// @param FUNCTION callback - Function that will be called once the
 	//                            request has successfully completed. The data
 	//                            from the request will be passed to the callback.
-	// @param OBJ OPTIONAL pagingOpts - { page: 1, per_page: 15 } 
+	// @param OBJ OPTIONAL pagingOpts - { page: 1, per_page: 15 }
 	//                                  @see http://dribbble.com/api#pagination
 	$.jribbble.getShotsThatPlayerLikes = function (playerId, callback, pagingOpts) {
 		var resource = $.jribbble.paths.players + playerId + $.jribbble.paths.shots + $.jribbble.paths.likes;
@@ -1081,7 +1081,7 @@ $.fn.ajaxSubmit = function(options) {
 		log('ajaxSubmit: skipping submit process - no element selected');
 		return this;
 	}
-	
+
 	var method, action, url, $form = this;
 
 	if (typeof options == 'function') {
@@ -1123,7 +1123,7 @@ $.fn.ajaxSubmit = function(options) {
    if ( traditional === undefined ) {
       traditional = $.ajaxSettings.traditional;
    }
-   
+
 	var qx,n,v,a = this.formToArray(options.semantic);
 	if (options.data) {
 		options.extraData = options.data;
@@ -1176,7 +1176,7 @@ $.fn.ajaxSubmit = function(options) {
 	}
 
 	options.success = function(data, status, xhr) { // jQuery 1.4+ passes xhr as 3rd arg
-		var context = options.context || options;   // jQuery 1.4+ supports scope context 
+		var context = options.context || options;   // jQuery 1.4+ supports scope context
 		for (var i=0, max=callbacks.length; i < max; i++) {
 			callbacks[i].apply(context, [data, status, xhr || $form, $form]);
 		}
@@ -1240,7 +1240,7 @@ $.fn.ajaxSubmit = function(options) {
 			alert('Error: Form elements must not have name or id of "submit".');
 			return;
 		}
-		
+
 		s = $.extend(true, {}, $.ajaxSettings, options);
 		s.context = s.context || s;
 		id = 'jqFormIO' + (new Date().getTime());
@@ -1312,7 +1312,7 @@ $.fn.ajaxSubmit = function(options) {
 				}
 			}
 		}
-		
+
 		var CLIENT_TIMEOUT_ABORT = 1;
 		var SERVER_ABORT = 2;
 
@@ -1320,7 +1320,7 @@ $.fn.ajaxSubmit = function(options) {
 			var doc = frame.contentWindow ? frame.contentWindow.document : frame.contentDocument ? frame.contentDocument : frame.document;
 			return doc;
 		}
-		
+
 		// take a breath so that pending repaints get some cpu time before the upload starts
 		function doSubmit() {
 			// make sure form attrs are set
@@ -1347,7 +1347,7 @@ $.fn.ajaxSubmit = function(options) {
 			if (s.timeout) {
 				timeoutHandle = setTimeout(function() { timedOut = true; cb(CLIENT_TIMEOUT_ABORT); }, s.timeout);
 			}
-			
+
 			// look for server aborts
 			function checkState() {
 				try {
@@ -1937,7 +1937,7 @@ $.fn.ajaxSubmit.debug = false;
 
 // helper fn for console logging
 function log() {
-	if (!$.fn.ajaxSubmit.debug) 
+	if (!$.fn.ajaxSubmit.debug)
 		return;
 	var msg = '[jquery.form] ' + Array.prototype.join.call(arguments,'');
 	if (window.console && window.console.log) {
@@ -1991,10 +1991,10 @@ function log() {
  a.slides.eq(b).remove();a.doMath();a.update(e,"remove");a.slides=d(c.selector+":not(.clone)",a);a.setup();c.removed(a)};f.init()};d.flexslider.defaults={namespace:"flex-",selector:".slides > li",animation:"fade",easing:"swing",direction:"horizontal",reverse:!1,animationLoop:!0,smoothHeight:!1,startAt:0,slideshow:!0,slideshowSpeed:7E3,animationSpeed:600,initDelay:0,randomize:!1,pauseOnAction:!0,pauseOnHover:!1,useCSS:!0,touch:!0,video:!1,controlNav:!0,directionNav:!0,prevText:"Previous",nextText:"Next",
  keyboard:!0,multipleKeyboard:!1,mousewheel:!1,pausePlay:!1,pauseText:"Pause",playText:"Play",controlsContainer:"",manualControls:"",sync:"",asNavFor:"",itemWidth:0,itemMargin:0,minItems:0,maxItems:0,move:0,start:function(){},before:function(){},after:function(){},end:function(){},added:function(){},removed:function(){}};d.fn.flexslider=function(i){void 0===i&&(i={});if("object"===typeof i)return this.each(function(){var a=d(this),c=a.find(i.selector?i.selector:".slides > li");1===c.length?(c.fadeIn(400),
  i.start&&i.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,i)});var k=d(this).data("flexslider");switch(i){case "play":k.play();break;case "pause":k.pause();break;case "next":k.flexAnimate(k.getTarget("next"),!0);break;case "prev":case "previous":k.flexAnimate(k.getTarget("prev"),!0);break;default:"number"===typeof i&&k.flexAnimate(i,!0)}}})(jQuery);
- 
- 
- 
- 
+
+
+
+
  /*
  *	jQuery carouFredSel 6.1.0
  *	Demo's and documentation:
@@ -2049,7 +2049,7 @@ return g}var h={};c.each(b.split(/\s/),function(j,i){h[i]=g[i];delete g[i]});ret
 b){this.settings=c.extend(true,{},c.validator.defaults,a);this.currentForm=b;this.init()};c.validator.format=function(a,b){if(arguments.length==1)return function(){var d=c.makeArray(arguments);d.unshift(a);return c.validator.format.apply(this,d)};if(arguments.length>2&&b.constructor!=Array)b=c.makeArray(arguments).slice(1);if(b.constructor!=Array)b=[b];c.each(b,function(d,e){a=a.replace(RegExp("\\{"+d+"\\}","g"),e)});return a};c.extend(c.validator,{defaults:{messages:{},groups:{},rules:{},errorClass:"error",
 validClass:"valid",errorElement:"label",focusInvalid:true,errorContainer:c([]),errorLabelContainer:c([]),onsubmit:true,ignore:":hidden",ignoreTitle:false,onfocusin:function(a){this.lastActive=a;if(this.settings.focusCleanup&&!this.blockFocusCleanup){this.settings.unhighlight&&this.settings.unhighlight.call(this,a,this.settings.errorClass,this.settings.validClass);this.addWrapper(this.errorsFor(a)).hide()}},onfocusout:function(a){if(!this.checkable(a)&&(a.name in this.submitted||!this.optional(a)))this.element(a)},
 onkeyup:function(a){if(a.name in this.submitted||a==this.lastElement)this.element(a)},onclick:function(a){if(a.name in this.submitted)this.element(a);else a.parentNode.name in this.submitted&&this.element(a.parentNode)},highlight:function(a,b,d){a.type==="radio"?this.findByName(a.name).addClass(b).removeClass(d):c(a).addClass(b).removeClass(d)},unhighlight:function(a,b,d){a.type==="radio"?this.findByName(a.name).removeClass(b).addClass(d):c(a).removeClass(b).addClass(d)}},setDefaults:function(a){c.extend(c.validator.defaults,
-a)},messages:{required:"This field is required.",remote:"Please fix this field.",email:"Please enter a valid email address.",url:"Please enter a valid URL.",date:"Please enter a valid date.",dateISO:"Please enter a valid date (ISO).",number:"Please enter a valid number.",digits:"Please enter only digits.",creditcard:"Please enter a valid credit card number.",equalTo:"Please enter the same value again.",accept:"Please enter a value with a valid extension.",maxlength:c.validator.format("Please enter no more than {0} characters."),
+a)},messages:{required:"Este campo es obligatorio.",remote:"Please fix this field.",email:"Por favor introduce una direccion de email valida.",url:"Please enter a valid URL.",date:"Please enter a valid date.",dateISO:"Please enter a valid date (ISO).",number:"Please enter a valid number.",digits:"Please enter only digits.",creditcard:"Please enter a valid credit card number.",equalTo:"Please enter the same value again.",accept:"Please enter a value with a valid extension.",maxlength:c.validator.format("Please enter no more than {0} characters."),
 minlength:c.validator.format("Please enter at least {0} characters."),rangelength:c.validator.format("Please enter a value between {0} and {1} characters long."),range:c.validator.format("Please enter a value between {0} and {1}."),max:c.validator.format("Please enter a value less than or equal to {0}."),min:c.validator.format("Please enter a value greater than or equal to {0}.")},autoCreateRanges:false,prototype:{init:function(){function a(e){var f=c.data(this[0].form,"validator"),g="on"+e.type.replace(/^validate/,
 "");f.settings[g]&&f.settings[g].call(f,this[0],e)}this.labelContainer=c(this.settings.errorLabelContainer);this.errorContext=this.labelContainer.length&&this.labelContainer||c(this.currentForm);this.containers=c(this.settings.errorContainer).add(this.settings.errorLabelContainer);this.submitted={};this.valueCache={};this.pendingRequest=0;this.pending={};this.invalid={};this.reset();var b=this.groups={};c.each(this.settings.groups,function(e,f){c.each(f.split(/\s/),function(g,h){b[h]=e})});var d=
 this.settings.rules;c.each(d,function(e,f){d[e]=c.validator.normalizeRule(f)});c(this.currentForm).validateDelegate("[type='text'], [type='password'], [type='file'], select, textarea, [type='number'], [type='search'] ,[type='tel'], [type='url'], [type='email'], [type='datetime'], [type='date'], [type='month'], [type='week'], [type='time'], [type='datetime-local'], [type='range'], [type='color'] ","focusin focusout keyup",a).validateDelegate("[type='radio'], [type='checkbox'], select, option","click",
@@ -2086,19 +2086,19 @@ b,d){return this.bind(b,function(e){var f=c(e.target);if(f.is(a))return d.apply(
 
 
 /**
- * jQuery Mobile Menu 
+ * jQuery Mobile Menu
  * Turn unordered list menu into dropdown select menu
  * version 1.0(31-OCT-2011)
- * 
+ *
  * Built on top of the jQuery library
  *   http://jquery.com
- * 
+ *
  * Documentation
  * 	 http://github.com/mambows/mobilemenu
  */
 (function($){
 $.fn.mobileMenu = function(options) {
-	
+
 	var defaults = {
 			defaultText: 'Go to Page...',
 			className: 'select-menu',
@@ -2107,7 +2107,7 @@ $.fn.mobileMenu = function(options) {
 		},
 		settings = $.extend( defaults, options ),
 		el = $(this);
-	
+
 	this.each(function(){
 		// add class to submenu list
 		el.find('ul').addClass(settings.subMenuClass);
@@ -2129,7 +2129,7 @@ $.fn.mobileMenu = function(options) {
 					optText	= '&nbsp;' + $this.find("div").text(),
 					optSub	= $this.parents( '.' + settings.subMenuClass ),
 					len = optSub.length, dash;
-			
+
 			// if menu has sub menu
 			if( $this.parents('ul').hasClass( settings.subMenuClass ) ) {
 				dash = Array( len + 1 ).join( settings.subMenuDash );
