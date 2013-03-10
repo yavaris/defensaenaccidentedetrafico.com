@@ -1,5 +1,4 @@
 <?php
-// linea con comentario
     session_start();
 
     // Configuration File
@@ -7,4 +6,5 @@
 
     // Main Template
     include_once("templates/main.html");
+//hay que tirar pa ver si me matas
 ?>
