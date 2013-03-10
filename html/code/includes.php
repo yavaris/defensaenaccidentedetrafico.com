@@ -6,5 +6,6 @@
 
     // Main Template
     include_once("templates/main.html");
-//hay que tirar pa ver si me matas
+//hay que tirar pa ver si me matas.
+
 ?>
