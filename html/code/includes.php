@@ -1,5 +1,7 @@
 <?php
     //
+// linea con comentario
+
     session_start();
 
     // Configuration File
