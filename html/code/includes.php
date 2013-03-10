@@ -1,5 +1,5 @@
 <?php
-	// dfa
+// linea con comentario
     session_start();
 
     // Configuration File
