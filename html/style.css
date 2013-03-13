@@ -597,9 +597,10 @@ form small {
 
 
 #top-bar {
-    position: relative;
-    background-color: #EEE;
-    height: 40px;
+	position: relative;
+	background-color: #282A2B;
+	height: 40px;
+	font-size:15px;
 }
 
 #top-menu {
@@ -623,7 +624,7 @@ form small {
     position: relative;
     line-height: 20px;
     margin-top: 10px;
-    color: #777;
+    color: #FFF;
 }
 
 #top-menu li span { color: #999; }
@@ -766,6 +767,7 @@ form small {
 #logo img {
     display: block;
     max-width: 100%;
+	padding-top: 7px;
 }
 
 #logo a.standard-logo { display: block; }
